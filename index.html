@@ -22,11 +22,11 @@
                 </div>
 
                 <ul class="my-5">
-                    <li v-for="fruta of frutas" class="my-4 font-weight-bold list-unstyled border-bottom border-secondary d-flex justify-content-between">
+                    <li v-for="fruta of frutas" class="my-4 pb-1 font-weight-bold list-unstyled border-bottom border-secondary d-flex justify-content-between align-items-center">
                         Hay {{fruta.cantidad}} unidades de {{fruta.nombre}}. <span v-if="fruta.cantidad === 0" class="small font-weight-bold text-secondary">SIN STOCK</span>
                         <div class="buttons">
-                            <button class="btn btn-success"><span class="h5 font-weight-bold">+</span></button>
-                            <button class="btn"><span class="h5 font-weight-bold">-</span></button>
+                            <button @click="fruta.cantidad++" class="btn btn-success"><span class="h5 font-weight-bold">+</span></button>
+                            <button @click="fruta.cantidad--" class="btn"><span class="h5 font-weight-bold">-</span></button>
                         </div>
                     </li>
                 </ul>
