@@ -6,6 +6,7 @@ const app = new Vue ({
             {nombre: 'bananas', cantidad: 3},
             {nombre: 'frutillas', cantidad: 1},
             {nombre: 'naranjas', cantidad: 0}
-        ]
+        ],
+        nuevaFruta: ''
     }
 })
