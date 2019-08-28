@@ -7,6 +7,8 @@
     <title>Mini App de Frutas con VUE js</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 
@@ -19,11 +21,14 @@
                     <button class="btn mt-2" @click="agregarFrutas">Agregar fruta</button>
                 </div>
 
-                <ul class="my-5 border border-secondary">
-                    <li v-for="fruta of frutas" class="my-4 font-weight-bold list-unstyled">
+                <ul class="my-5">
+                    <li v-for="fruta of frutas" class="my-4 font-weight-bold list-unstyled border-bottom border-secondary">
                         Hay {{fruta.cantidad}} unidades de {{fruta.nombre}}.
+                        <button class="btn"><i class="material-icons">add</i></button>
+                        <button class="btn"></button>
                     </li>
                 </ul>
+                <p class="h5 px-5">Total de frutas : <span class="font-weight-bold">{{sumarFrutas}}</span></p>
             </div>
         </div>
     </div>
